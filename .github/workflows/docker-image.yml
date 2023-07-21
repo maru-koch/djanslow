@@ -30,3 +30,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{secrets.DOCKER_HUB_USERNAME}}/web_app:latest
+      - 
+        name: Run django unit test
+        run: |
+          python manage.py test
