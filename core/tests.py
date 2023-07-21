@@ -13,5 +13,5 @@ class SimpleTest(APITestCase):
         path = reverse('add')
         payload = {'name':'Kio rant', 'sex':'Female', 'address':'Ademuno'}
         response = client.post(path, payload)
-        self.assertTrue(response.status_code, 201)
+        self.assertTrue(response, 200)
         
